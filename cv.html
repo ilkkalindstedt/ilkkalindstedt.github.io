@@ -64,6 +64,23 @@
         .pub-item::before { content: "—"; position: absolute; left: 0; color: var(--border-color); }
 
         footer { text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 60px; }
+
+     /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+    .name-title h1 { font-size: 2rem; }
+    
+    nav ul { 
+        flex-direction: column; /* Stacks items vertically */
+        gap: 10px;              /* Reduces space between items */
+        padding: 0;
+        align-items: center;    /* Centers the text */
+    }
+
+    nav li {
+        width: 100%;            /* Makes the clickable area wider */
+        padding: 5px 0;
+    }
+}
     </style>
 </head>
 <body>

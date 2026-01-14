@@ -102,6 +102,23 @@
             .video-thumb { flex: 0 0 150px; }
             .podcast-item { flex-direction: column; text-align: center; gap: 15px; }
         }
+
+     /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+    .name-title h1 { font-size: 2rem; }
+    
+    nav ul { 
+        flex-direction: column; /* Stacks items vertically */
+        gap: 10px;              /* Reduces space between items */
+        padding: 0;
+        align-items: center;    /* Centers the text */
+    }
+
+    nav li {
+        width: 100%;            /* Makes the clickable area wider */
+        padding: 5px 0;
+    }
+}
     </style>
 </head>
 <body>

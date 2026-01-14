@@ -95,6 +95,24 @@
             text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid var(--border-color); 
             padding-top: 20px; margin-top: 80px; 
         }
+
+
+     /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+    .name-title h1 { font-size: 2rem; }
+    
+    nav ul { 
+        flex-direction: column; /* Stacks items vertically */
+        gap: 10px;              /* Reduces space between items */
+        padding: 0;
+        align-items: center;    /* Centers the text */
+    }
+
+    nav li {
+        width: 100%;            /* Makes the clickable area wider */
+        padding: 5px 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -117,7 +135,7 @@
 
     <main class="contact-box">
         <h2>Contact information</h2>
-        <p>For all inquiries, questions, or collaboration proposals, please reach out via email:</p>
+        <p>For all inquiries, questions, and comments, please reach out via email:</p>
         
         <a href="mailto:ilkka.lindstedt@helsinki.fi" class="email-link">ilkka.lindstedt@helsinki.fi</a>
 

@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,20 +33,24 @@
             margin-bottom: 0.5em;
         }
 
-        a {
-            color: var(--accent-color);
+        /* --- Link Styling (Removed Blue) --- */
+        a, a:visited {
+            color: var(--text-color); /* Matches text instead of blue */
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+            text-decoration: none;
         }
 
         /* --- Layout --- */
         .container {
             max-width: 600px;
-	
             margin: 0 auto;
             padding: 20px;
         }
@@ -87,27 +91,28 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-   nav a { text-decoration: none; color: var(--text-color); font-weight: 600; }
-        nav a:hover { text-decoration: underline; }
-        /* --- Hero Image / Calligraphy Placeholder --- */
-        .hero-image {
-           object-fit: contain;
-            background-color: #e5e0d8; /* Placeholder color */
-            margin: 40px 0;
-            display: flex;
 
-            align-items: center;
-            justify-content: center;
-            border-radius: 2px;
-            color: #777;
-            font-style: italic;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
+        nav a, nav a:visited { 
+            border-bottom: none; 
+            color: var(--text-color); 
         }
-        
-        /* Optional: If you have an image, remove the 'background-color' above and use background-image */
-        /* .hero-image { background-image: url('your-inscription-image.jpg'); background-size: cover; } */
+
+        /* --- Hero Image (Resized by 50%) --- */
+        .hero-image {
+            max-width: 300px; /* Exactly 50% of the 600px container */
+            margin: 40px auto; /* Centered */
+            display: block;
+            border: 1px solid var(--border-color);
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
         /* --- Main Content --- */
         main {
@@ -135,21 +140,16 @@
 
         /* --- Responsive Tweaks --- */
         @media (max-width: 600px) {
-    .name-title h1 { font-size: 2rem; }
-    
-    nav ul { 
-        flex-direction: column; /* Stacks items vertically */
-        gap: 10px;              /* Reduces space between items */
-        padding: 0;
-        align-items: center;    /* Centers the text */
-    }
-
-    nav li {
-        width: 100%;            /* Makes the clickable area wider */
-        border-bottom: 1px solid var(--border-color); /* Optional: adds separators */
-        padding: 5px 0;
-    }
-}
+            .name-title h1 { font-size: 2rem; }
+            .hero-image { width: 70%; } /* Slightly larger for mobile readability */
+            
+            nav ul { 
+                flex-direction: column;
+                gap: 10px;
+                padding: 0;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -175,7 +175,6 @@
     <div class="container">
         <div class="hero-image">
              <img src="Lindstedt.jpg" alt="Ilkka Lindstedt">
-
         </div>
 
         <main>
