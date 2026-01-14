@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Public Scholarship | Ilkka Lindstedt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2c2c2c;
+            --accent-color: #1a3c5e;
+            --border-color: #dcd6ce;
+        }
+
+        body { font-family: 'Open Sans', sans-serif; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 30px; margin-bottom: 40px; }
+        h1, h2 { font-family: 'Merriweather', serif; color: var(--accent-color); }
+        h1 { margin-bottom: 5px; font-size: 2.4rem; }
+        nav ul { list-style: none; padding: 0; display: flex; justify-content: center; gap: 25px; margin-top: 20px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+
+        section { margin-bottom: 60px; }
+        h2 { font-size: 1.6rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 30px; }
+
+        /* Video Card Styling */
+        .video-card {
+            display: flex;
+            background: white;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            overflow: hidden;
+        }
+
+        .video-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .video-thumb {
+            flex: 0 0 240px;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Generic Play Icon */
+        .video-thumb::after {
+            content: '▶';
+            color: white;
+            font-size: 2rem;
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .video-content { padding: 20px; flex: 1; }
+        .video-title { display: block; font-family: 'Merriweather', serif; font-weight: 700; font-size: 1.1rem; color: var(--accent-color); margin-bottom: 5px; }
+        .video-meta { display: block; font-size: 0.9rem; color: #666; font-style: italic; }
+
+        /* Audio Items */
+        .podcast-item {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .listen-btn { background-color: var(--accent-color); color: white; padding: 10px 18px; text-decoration: none; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
+
+        footer { text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid var(--border-color); padding-top: 20px; margin-top: 60px; }
+
+        @media (max-width: 650px) {
+            .video-card { flex-direction: column; }
+            .video-thumb { flex: 0 0 150px; }
+            .podcast-item { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Media</h1>
+        <p>Lectures, Interviews & Podcasts</p>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Talks and Interviews</h2>
+
+        <a href="https://www.youtube.com/watch?v=YVLuejyecaM" target="_blank" class="video-card">
+            <div class="video-thumb" style="background: url('https://img.youtube.com/vi/YVLuejyecaM/mqdefault.jpg') center/cover;"></div>
+            <div class="video-content">
+                <span class="video-title">The Fate of the Medinan Jews</span>
+                <span class="video-meta">A talk given at a conference at Pembroke College, Oxford (24-25 March 2025)</span>
+                <p style="font-size: 0.85rem; margin-top: 10px;">Click to watch on YouTube →</p>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=ujImseWF65U" target="_blank" class="video-card">
+            <div class="video-thumb" style="background: url('https://img.youtube.com/vi/ujImseWF65U/mqdefault.jpg') center/cover;"></div>
+            <div class="video-content">
+                <span class="video-title">Muhammad and his followers in context</span>
+                <span class="video-meta">Sképsislamica (2024)</span>
+                <p style="font-size: 0.85rem; margin-top: 10px;">Click to watch on YouTube →</p>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=HMPYIVhfDTE" target="_blank" class="video-card">
+            <div class="video-thumb" style="background: url('https://img.youtube.com/vi/HMPYIVhfDTE/mqdefault.jpg') center/cover;"></div>
+            <div class="video-content">
+                <span class="video-title">What Was Muhammad’s Arabia Really Like?</span>
+                <span class="video-meta">Exploring the Quran and the Bible, with Gabriel S. Reynolds (2025)</span>
+                <p style="font-size: 0.85rem; margin-top: 10px;">Click to watch on YouTube →</p>
+            </div>
+        </a>
+
+        <a href="https://www.youtube.com/watch?v=QKbPCpwkBF0" target="_blank" class="video-card">
+            <div class="video-thumb" style="background: url('https://img.youtube.com/vi/QKbPCpwkBF0/mqdefault.jpg') center/cover;"></div>
+            <div class="video-content">
+                <span class="video-title">Female Infanticide? Rethinking a Pre-Islamic Narrative</span>
+                <span class="video-meta">Sképsislamica (2025)</span>
+                <p style="font-size: 0.85rem; margin-top: 10px;">Click to watch on YouTube →</p>
+            </div>
+        </a>
+    </section>
+
+    <section>
+        <h2>Audio & Podcasts</h2>
+        <div class="podcast-item">
+            <div class="podcast-info">
+                <h3>Muhammad in Context</h3>
+                <p>Church Coffee Podcast | Interview with Dr. Ilkka Lindstedt</p>
+            </div>
+            <a href="https://open.spotify.com/episode/0Kz5XDmKJFUsLdxvhz1JbU?si=5kg6RaQ-TUy6V8kF7WFhSQ" target="_blank" class="listen-btn">Listen on Spotify</a>
+        </div>
+
+        <div class="podcast-item">
+            <div class="podcast-info">
+                <h3>Koraanillakin on historiansa</h3>
+                <p>Avoimella otteella -podcast | Helsingin yliopiston kirjasto</p>
+            </div>
+            <a href="https://open.spotify.com/episode/2rhuXKmpXNKWroAFtlOaNJ?si=fee5e5e6d7794497&nd=1&dlsi=08af69ab71e04868" target="_blank" class="listen-btn">Listen on Spotify</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ilkka Lindstedt • Faculty of Theology, University of Helsinki</p>
+    </footer>
+</div>
+
+</body>
+</html>
