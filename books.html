@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books | Ilkka Lindstedt</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2c2c2c;
+            --accent-color: #1a3c5e;
+            --border-color: #dcd6ce;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        header { 
+            text-align: center; 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 30px; 
+            margin-bottom: 50px; 
+        }
+          .notice {
+            background-color: #f4f1ec;
+            border-left: 4px solid var(--accent-color);
+            padding: 20px;
+            margin-top: 30px;
+font-size: 0.9rem;
+            font-style: italic;
+        }
+        h1, h2 { font-family: 'Merriweather', serif; color: var(--accent-color); }
+        h1 { margin-bottom: 5px; font-size: 2.4rem; }
+        
+   /* --- Navigation --- */
+        nav {
+            margin-top: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+      nav a { text-decoration: none; color: var(--text-color); font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+
+        /* Book Section Layout */
+        .book-entry {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 80px;
+            align-items: flex-start;
+        }
+
+        .book-cover {
+            flex: 0 0 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .book-info { flex: 1; }
+
+        .book-title { 
+            font-size: 1.6rem; 
+            margin-top: 0; 
+            margin-bottom: 10px; 
+            line-height: 1.3;
+        }
+
+        .book-meta {
+            font-family: 'Merriweather', serif;
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .description {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-link:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        footer { 
+            text-align: center; 
+            font-size: 0.8rem; 
+            color: #888; 
+            border-top: 1px solid var(--border-color); 
+            padding-top: 20px; 
+            margin-top: 60px; 
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .book-entry { flex-direction: column; align-items: center; text-align: center; }
+            .book-cover { flex: 0 0 auto; width: 200px; margin-bottom: 20px; }
+            .description { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Books</h1>
+        <p>Ilkka Lindstedt | University of Helsinki</p>
+          <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="book-entry">
+            <div class="book-cover">
+                <img src="Book cover.jpeg" alt="Cover of Muhammad and His Followers in Context">
+            </div>
+            <div class="book-info">
+                <h2 class="book-title">Muḥammad and His Followers in Context: The Religious Map of Late Antique Arabia</h2>
+                <span class="book-meta">Brill (2024) | Islamic History and Civilization, Vol. 209</span>
+                <div class="description">
+                   <p> This book surveys and analyzes changes in religious groups and identities in late antique Arabia, ca. 300–700 CE. Drawing on contemporary evidence – specifically, inscriptions, archaeological remains, Arabic poetry, the Qur'an, and the so-called Constitution of Medina – the study argues that transformations in social and religious groups were more piecemeal than previously assumed. The central argument of the book is that forms of monotheism (in particular, Judaism and Christianity) were prevalent in Arabia, including the Hijaz, at the rise of Islam. </p></div>
+ <div class="notice">
+<p>Reviews of the book:
+
+</p>
+
+
+<p>"Depictions of the Prophet Muhammad and his religious movement have long been based on non-contemporary sources. In recent years, scholars have incorporated new sources to replace traditional Arabic historiography. Among these scholars is Lindstedt (Univ. of Helsinki, Finland), who uses inscriptions, poetry, and non-Arabic contemporary writings to develop a social and religious portrait of Muhammad’s community... Summing Up: Highly recommended" - R. W. Zens in Choice</p>
+
+<p>"Lindstedt does a great service to the field by examining myriad obscure and difficult pre-Islamic commissioned inscriptions, graffiti and poems to shed light on this complicatedperiod. Much of the material he presents has been made available only recently, and I amgrateful to see it collected in such a readable and clear format. The book includes substantialreferences and footnotes, yet the details are not overwhelming or burdensome" – Sandra Toenies Keating in Islam and Christian–Muslim Relations</p>
+
+<p>"One of the contributions of the book, especially for archaeologists, is the identification of Christians and Jews in the Arabian Peninsula... Another merit of the text is its very broad coverage of the literature on early Islam, the Quran, and Abrahamic religions in general. Finally, the book is easy to read, as the author defines and clarifies all the terminology he uses and clearly summarizes every chapter" – Hagit Nol in Journal of Islamic Archaeology</p>
+                </div>
+                <a href="https://brill.com/display/title/69380" target="_blank" class="btn-link">View at Brill (Open Access)</a>
+            </div>
+        </section>
+
+        <section class="book-entry">
+            <div class="book-cover">
+                <img src="Booc cover.jpg" alt="Cover of Epigraphy and Theory in the Study of Early Islam">
+            </div>
+            <div class="book-info">
+                <h2 class="book-title">Epigraphy and Theory in the Study of Early Islam</h2>
+                <span class="book-meta">Routledge (2026) | Variorum Collected Studies</span>
+                <div class="description">
+                   This volume consists of ten studies on pre-Islamic Arabia, early Islam, and the sources – particularly inscriptions – that can be used to study these historical periods and phenomena. The studies of the book also underscore the importance of theory (in particular, social identity theory), which is still underutilized in the field. One of the studies, "Reflections on Method and Theory in the Study of Islam’s Origins," which opens the collection, is previously unpublished. The other nine studies (published originally between 2015 and 2023) are republished here with some updates that reflect changes and developments in the field. The book examines religious groups and notions in late antique Arabia with a focus on epigraphic evidence. The volume also emphasizes the potential of social identity theory in early Islamic studies.
+                </div>
+                <a href="https://www.routledge.com/Epigraphy-and-Theory-in-the-Study-of-Early-Islam/Lindstedt/p/book/9781041146520" target="_blank" class="btn-link">See the TOC and order at Routledge</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ilkka Lindstedt • Faculty of Theology, University of Helsinki</p>
+    </footer>
+</div>
+
+</body>
+</html>
