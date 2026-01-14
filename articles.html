@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Articles | Ilkka Lindstedt</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fdfbf7;
+            --text-color: #2c2c2c;
+            --accent-color: #1a3c5e;
+            --border-color: #dcd6ce;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            margin: 0; padding: 0;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        header { 
+            text-align: center; 
+            border-bottom: 1px solid var(--border-color); 
+            padding-bottom: 30px; 
+            margin-bottom: 40px; 
+        }
+        
+        h1 { font-family: 'Merriweather', serif; color: var(--accent-color); font-size: 2.4rem; margin-bottom: 5px; }
+        
+        nav ul { 
+            list-style: none; padding: 0; display: flex; justify-content: center; gap: 25px; margin-top: 20px; 
+            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; 
+        }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
+
+        /* Publication List Styling */
+        #publication-list { margin-top: 30px; }
+
+        .pub-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pub-title {
+            display: block;
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--accent-color);
+            text-decoration: none;
+            line-height: 1.4;
+        }
+
+        .pub-title:hover { text-decoration: underline; }
+
+        .pub-date {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .pub-description {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .loading { font-style: italic; color: #666; text-align: center; margin-top: 50px; }
+
+        footer { 
+            text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid var(--border-color); 
+            padding-top: 20px; margin-top: 60px; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Latest Articles</h1>
+        <p>Fetched from the University of Helsinki Research Feed</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="articles.html" style="text-decoration: underline;">Articles</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="publication-list">
+        <p class="loading">Fetching latest publications...</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ilkka Lindstedt • Faculty of Theology, University of Helsinki</p>
+    </footer>
+</div>
+
+<script>
+    // RSS Feed URL
+    const rssUrl = 'https://researchportal.helsinki.fi/en/persons/ilkka-lindstedt/publications/?format=rss';
+    // Using rss2json API to bypass CORS restrictions
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+    async function fetchPublications() {
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+
+            if (data.status === 'ok') {
+                const listContainer = document.getElementById('publication-list');
+                listContainer.innerHTML = ''; // Clear loading message
+
+                data.items.forEach(item => {
+                    // Create Date String
+                    const date = new Date(item.pubDate).toLocaleDateString('en-GB', {
+                        year: 'numeric',
+                        month: 'long'
+                    });
+
+                    const pubHtml = `
+                        <div class="pub-item">
+                            <span class="pub-date">${date}</span>
+                            <a href="${item.link}" target="_blank" class="pub-title">${item.title}</a>
+                            <div class="pub-description">
+                                ${item.description.substring(0, 250)}...
+                            </div>
+                        </div>
+                    `;
+                    listContainer.innerHTML += pubHtml;
+                });
+            } else {
+                throw new Error('Failed to load feed');
+            }
+        } catch (error) {
+            document.getElementById('publication-list').innerHTML = 
+                '<p class="loading">Unable to load publications automatically. Please visit the <a href="https://researchportal.helsinki.fi/en/persons/ilkka-lindstedt/publications/">University Portal</a>.</p>';
+        }
+    }
+
+    fetchPublications();
+</script>
+
+</body>
+</html>
