@@ -34,16 +34,27 @@
             margin-bottom: 40px; 
         }
         
-        h1 { font-family: 'Merriweather', serif; color: var(--accent-color); font-size: 2.2rem; margin-bottom: 10px; }
+        h1 { font-family: 'Merriweather', serif; color: var(--accent-color); font-size: 2.4rem; margin-bottom: 5px; }
         h2 { font-family: 'Merriweather', serif; color: var(--accent-color); font-size: 1.5rem; margin-top: 45px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
 
-        nav ul { 
-            list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; margin-top: 20px; 
-            text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; flex-wrap: wrap;
+      /* --- Navigation --- */
+        nav {
+            margin-top: 30px;
         }
-        
-        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; transition: 0.3s; }
-        nav a:hover { color: var(--accent-color); text-decoration: underline; }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 600; }
+        nav a:hover { text-decoration: underline; }
 
         .pub-section { margin-top: 20px; }
         .pub-list { list-style: none; padding: 0; }
@@ -70,13 +81,32 @@
             text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid var(--border-color); 
             padding-top: 20px; margin-top: 60px; 
         }
+
+       }
+   /* --- Responsive Tweaks --- */
+        @media (max-width: 600px) {
+    .name-title h1 { font-size: 2rem; }
+    
+    nav ul { 
+        flex-direction: column; /* Stacks items vertically */
+        gap: 10px;              /* Reduces space between items */
+        padding: 0;
+        align-items: center;    /* Centers the text */
+    }
+
+    nav li {
+        width: 100%;            /* Makes the clickable area wider */
+        padding: 5px 0;
+    }
+}
     </style>
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Scholarly Articles in English</h1>
+        <h1>Articles</h1>
+<p>Scholarly Articles in English</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -91,7 +121,7 @@
 
     <main>
         <section class="pub-section">
-            <h2>Journal Articles & Chapters in Edited Books (full list, Jan. 2026)</h2>
+            <h2>Journal Articles & Chapters in Edited Books (in English, full list, Jan. 2026)</h2>
             <ul class="pub-list">
                 <li class="pub-item">
                     <span class="pub-text">1) "Anti-Religious Views in the Works of Ibn al-Rāwandī and Abū l-ʿAlāʾ al-Maʿarrī." <em>Studia Orientalia</em> 111 (2011): 131–157. (Turkish translation published 2024).</span>
@@ -139,7 +169,7 @@
                     <a href="https://journal.fi/store/article/view/50822/18941" class="pdf-link" target="_blank">→ PDF</a>
                 </li>
                 <li class="pub-item">
-                    <span class="pub-text">12) "Bibliographie raisonnée zur arabischen Papyrologie: Neuerscheinungen 2015 und Nachträge 2013–2014." <em>Der Islam</em> 93/2 (2016): 539–588.</span>
+                    <span class="pub-text">12) "Bibliographie raisonnée zur arabischen Papyrologie: Neuerscheinungen 2015 und Nachträge 2013–2014 (with L. Berkes, U. Bsees, R. Daga Portillo, E. Garosi, A. Kaplony, S. Metz, L. Reinfandt, D. Potthast, O. Singer, L. Sonego, K. Younes)." <em>Der Islam</em> 93/2 (2016): 539–588.</span>
                     <a href="https://scholar.google.com/scholar?q=author:%22Ilkka+Lindstedt%22+%22Bibliographie+raisonnée%22" class="pdf-link" target="_blank">→ Google Scholar</a>
                 </li>
                 <li class="pub-item">
@@ -156,7 +186,7 @@
                 </li>
                 <li class="pub-item">
                     <span class="pub-text">16) "The ʿAbbāsid Revolution and Its Earliest Historiography." <em>Al-Usur al-Wusta</em> 25 (2017): 164–166.</span>
-                    <a href="https://scholar.google.com/scholar?q=author:%22Ilkka+Lindstedt%22+%22Abbāsid+Revolution%22" class="pdf-link" target="_blank">→ Google Scholar</a>
+                    <a href="https://journals.library.columbia.edu/index.php/alusur/article/view/7002/3739" class="pdf-link" target="_blank">→ PDF</a>
                 </li>
                 <li class="pub-item">
                     <span class="pub-text">17) "Pre-Islamic Arabia and Early Islam." In: <em>Routledge Handbook on Early Islam</em>, 159–176. London: Routledge (2018).</span>
@@ -171,7 +201,7 @@
                     <a href="https://scholar.google.com/scholar?q=author:%22Ilkka+Lindstedt%22+%22Who+Is+in+Who+Is+out%22" class="pdf-link" target="_blank">→ Google Scholar</a>
                 </li>
                 <li class="pub-item">
-                    <span class="pub-text">20) "Arabic Rock Inscriptions until 750 CE." In: <em>The Umayyad World</em>, 411–437. London: Routledge (2021).</span>
+                    <span class="pub-text">20) "Arabic Rock Inscriptions up to 750 CE." In: <em>The Umayyad World</em>, 411–437. London: Routledge (2021).</span>
                     <a href="https://scholar.google.com/scholar?q=author:%22Ilkka+Lindstedt%22+%22Arabic+Rock+Inscriptions%22" class="pdf-link" target="_blank">→ Google Scholar</a>
                 </li>
                 <li class="pub-item">
@@ -191,7 +221,7 @@
                     <a href="https://scholar.google.com/scholar?q=author:%22Ilkka+Lindstedt%22+%22Signs+of+identity+in+the+Quran%22" class="pdf-link" target="_blank">→ Google Scholar</a>
                 </li>
                 <li class="pub-item">
-                    <span class="pub-text">25) "Constantine the African’s Pantegni: The Evolution of Theorica, Book V" (Outi Kaltio, assisted by Ilkka Lindstedt). <em>Journal of Medieval Latin</em> 32 (2022): 155–208.</span>
+                    <span class="pub-text">25) "Constantine the African’s Pantegni: The Evolution of Theorica, Book V" (by Outi Kaltio, assisted by Ilkka Lindstedt). <em>Journal of Medieval Latin</em> 32 (2022): 155–208.</span>
                     <a href="https://scholar.google.com/scholar?q=%22Constantine+the+African’s+Pantegni%22" class="pdf-link" target="_blank">→ Google Scholar</a>
                 </li>
                 <li class="pub-item">
